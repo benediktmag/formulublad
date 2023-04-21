@@ -1,0 +1,204 @@
+\section*{Stærðfræðigreining II (STÆ205G+STÆ2013G):}
+\section*{II.1. Ferlar}
+\begin{align*}
+	\mathbf u &= u_1\mathbf i + u_2 \mathbf j + u_3 \mathbf k\\
+	\mathbf u \cdot \mathbf v &= u_1v_1 + u_2v_2 + u_3v_3\\
+	\mathbf u\times \mathbf v &= \det \begin{bmatrix}
+		\mathbf i & \mathbf j & \mathbf k\\
+		u_1 & u_2 & u_3 \\
+		v_1 & v_1 & v_3
+	\end{bmatrix}\\
+	\text{lengd } \mathbf u &= |\mathbf u| = 
+	\sqrt{\mathbf u \cdot \mathbf u} = \sqrt{u_1^2+u_2^2+u_3^2}\\
+	\text{horn milli vigra } &= \arccos \left( \frac{\mathbf u \cdot
+	\mathbf v}{|\mathbf u||\mathbf v|}\right)\\
+	\text{lengd ferils } &= \int_a^b |\mathbf v(t)|\, dt\\
+\end{align*}
+
+\subsection*{Pólhnit}
+\begin{align*}
+	r &= \sqrt{x^2+y^2}\\
+	\tan \theta &= \frac yx\\
+	\theta &= 2\arctan\left(\frac y{x+r}\right)\\
+\end{align*}
+
+\subsection*{Frenet-ramminn}
+Almennt:
+\begin{align*}
+    \Tv &= \frac {\vv (t)}{|\vv(t)|} & \text{einingarsnertill}\\
+    \Bv &= \frac{\vv \times \av}{|\vv \times \av|} & \text{einingarþvíþverill}\\
+    \Nv &= \Bv \times \Tv = \frac {d\Tv/dt}{|d\Tv/dt|} & \text{höfuðþverill}\\
+    \kappa &= \frac{|\vv \times \av|}{|\vv|^3} & \text{krappi}\\
+    \tau &= \frac{(\vv \times \av) \cdot (\frac d{dt}\av)}{|\vv\times \av|^2} & \text{vindingur}\\
+    \rho &= \frac 1\kappa & \text{krappageisli}\\
+\end{align*}
+Stikun með bogalengd:
+\begin{align*}
+	% Frenet-Serret
+    \Tv(s) &= \vv(s)\\
+    \kappa(s) &= \left| \frac {d\Tv}{ds}\right|\\
+	\Bv'(s) &= -\tau(s) \Nv(s)\\
+	\Nv(s) &= \frac {\Tv'(s)}{|\Tv'(s)|}\\
+	\Bv(s) &= \Tv(s) \times \Nv(s)\\
+	\Tv'(s) &= \kappa \Nv \\
+	\Nv'(s) &= -\kappa \Tv + \tau \Bv\\
+	\Bv'(s) &= -\tau \Nv
+\end{align*}
+\section*{II.2. Hlutafleiður}
+Snertiplan: $S(x,y) = f(a,b) + f_1(a,b)(x-a) + f_2(a,b)(y-b)$.
+
+Hlutafleiður: $\displaystyle f_k(\av) = \lim_{h\to 0} \frac{f(\av+h\ev_k)-f(\av)}h$.
+
+Diffranleiki: $\displaystyle \lim_{(h,k) \to (0,0)} \frac{f(a+h,b+k)-S(a+h,b+k)}{\sqrt{h^2+k^2}}=0$.
+
+Jacobi-fylki: $D\fv(\xv) = \begin{bmatrix}
+\frac{\partial y_1}{\partial x_1}&\frac{\partial y_1}{\partial x_2}&
+\cdots&\frac{\partial y_1}{\partial x_n}\\
+\frac{\partial y_2}{\partial x_1}&\frac{\partial y_2}{\partial x_2}&
+\cdots&\frac{\partial y_2}{\partial x_n}\\
+\vdots&\vdots&\ddots&\vdots\\
+\frac{\partial y_m}{\partial x_1}&\frac{\partial y_m}{\partial x_2}&
+\cdots&\frac{\partial y_m}{\partial x_n}
+\end{bmatrix}$.
+
+Stigull: $\displaystyle \nabla f(x,y)=f_1(x,y)\mbox{${\bf i}$}+f_2(x,y)\mbox{${\bf j}$}$.
+
+Stefnuafleiða: $\displaystyle D_{(u,v)}f(a,b)=\lim_{h\rightarrow 0^+}\frac{f(a+hu, b+hv)-f(a,b)}{h}$.
+
+Taylor-margliða ($n$-stigs): $\displaystyle P_{(n)}(x,y) 
+=\sum_{m=0}^n\sum_{j=0}^m \frac{1}{j!(m-j)!}
+D_1^jD_2^{m-j}f(a,b)(x-a)^j(y-b)^{m-j}$.
+
+\section*{II.3. Útgildisverkefni}
+Lagrange-margfaldari (fyrir $g(x,y)=0$): $L(x,y,\lambda) = f(x,y) + \lambda g(x,y)$.
+
+Lagrange-margfaldarar (fyrir $g=h=0$): $L(x,y,z,\lambda,\mu) = f(x,y,z) + \lambda g(x,y,z) + \mu h(x,y,z)$.
+
+\section*{II.4. Margföld heildi}
+Riemann-summa í tveimur víddum: $\displaystyle\\\mathcal{R}(f,P)=\sum_{i=1}^m\sum_{j=1}^n f(x_i^*, y_j^*)\Delta x_i\Delta
+	y_j$.
+
+Almenn breytuskipti fyrir tvöföld heildi: $\displaystyle \int\!\!\!\int_D f(x,y)\,dx\,dy=\int\!\!\!\int_S g(u,v)
+\bigg|\frac{\partial(x,y)}{\partial(u,v)}\bigg|\,du\,dv$.
+
+Breytuskipti í pólhnit: $\displaystyle \int\!\!\!\int_D f(x,y)\,dA=\int_\alpha^\beta\!\!\!\int_{a}^{b}
+f(r\cos\theta,r\sin\theta)\,r\,dr\, d\theta$.
+
+Almenn breytuskipti fyrir þreföld heildi:\\ $\displaystyle 
+\int\!\!\!\int\!\!\!\int_R f(x,y,z)\,dV =\int\!\!\!\int\!\!\!\int_S f(x(u,v,w), y(u,v,w), z(u,v,w))
+\bigg|\frac{\partial(x,y,z)}{\partial(u,v,w)}\bigg|\,du\,dv\,dw$.
+
+Breytuskipti í kúluhnit:\\ 
+$\displaystyle \int\!\!\!\int\!\!\!\int_R f(x,y,z)\,dV= \int_\alpha^\beta\!\int_c^d\!\int_a^b f(\rho\sin\varphi\cos\theta, \rho\sin\varphi\sin\theta,\rho\cos\varphi)
+\,\rho^2\sin\varphi\,d\rho\,d\varphi\,d\theta$.
+
+
+Yfirborðsflatarmál: $\displaystyle S=\int\!\!\!\int_D \sqrt{1+f_1(x,y)^2+f_2(x,y)^2}\,dA$.
+
+\section*{II.5. Vigursvið}
+Mætti ($\phi$) fyrir $\Fv$: $\Fv(x,y,z) = \nabla \phi(x,y,z)$.
+
+Heildi falls yfir feril: $\displaystyle 
+\int_{\cal C}f(x,y)\,ds =\int_a^b f(\mbox{${\bf r}$}(t))\,|\mbox{${\bf r}$}'(t)|\,dt
+ =\int_a^b f(x(t),y(t))\,\sqrt{x'(t)^2+y'(t)^2}\,dt$.
+
+Heildi vigursviðs eftir ferli: $\displaystyle \int_{\cal C} \mbox{${\bf F}$}\cdot d\mbox{${\bf r}$}= \int_{\cal C} \mbox{${\bf F}$}\cdot \mbox{${\bf T}$}\,ds
+=\int_a^b \mbox{${\bf F}$}(\mbox{${\bf r}$}(t))\cdot \mbox{${\bf r}$}'(t)\,dt$.
+
+Flatarmál stikaflatar $\rv$: $\displaystyle A=\int\!\!\!\int_D\,dS=\int\!\!\!\int_D 
+\big|{\textstyle\frac{\partial \mbox{${\bf r}$}}{\partial u} 
+\times\frac{\partial \mbox{${\bf r}$}}{\partial v}}\big|\,dudv$.
+
+Heildi falls $f$ yfir stikaflöt: $\displaystyle \int\!\!\!\int_{\cal S} f\,dS=\int\!\!\!\int_D f(\mbox{${\bf r}$}(u,v)) \big|{\textstyle\frac{\partial
+    \mbox{${\bf r}$}}{\partial u}
+\times\frac{\partial \mbox{${\bf r}$}}{\partial v}}\big|\,dudv$.
+
+Heildi vigursviðs $\Fv$ yfir stikaflöt: $\displaystyle \int\!\!\!\int_{\cal S} 
+\mbox{${\bf F}$}\cdot\mbox{${\bf N}$}\,dS
+=\int\!\!\!\int_D \mbox{${\bf F}$}(\mbox{${\bf r}$}(u,v))\cdot \bigg(
+\frac{\partial \mbox{${\bf r}$}}{\partial u}\times\frac{\partial \mbox{${\bf r}$}}{\partial
+  v}\bigg)\,
+du\,dv$.
+
+\section*{II.6. Diffur- og heildarreikningur vigursviða}
+
+$\displaystyle \nabla=\mbox{${\bf i}$}\,\frac{\partial}{\partial x}+\mbox{${\bf j}$}\,\frac{\partial}{\partial y}+\mbox{${\bf k}$}\,\frac{\partial}{\partial z}$.
+
+Stigull: $\displaystyle \mbox{${\rm\bf grad\,}$}\varphi=\nabla\varphi=\frac{\partial \varphi}{\partial x}\,\mbox{${\bf i}$}+
+\frac{\partial \varphi}{\partial y}\,\mbox{${\bf j}$}+\frac{\partial \varphi}{\partial z}\,\mbox{${\bf k}$}$
+
+Sundurleitni: $\displaystyle \mbox{${\rm\bf div\,}$}\mbox{${\bf F}$}=\nabla\cdot\mbox{${\bf F}$}=\frac{\partial F_1}{\partial x}+\frac{\partial F_2}{\partial y}+\frac{\partial F_3}{\partial z}$.
+
+Rót: $\displaystyle
+ \mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}=\nabla\times\mbox{${\bf F}$}=\begin{vmatrix} \mbox{${\bf i}$}&\mbox{${\bf j}$}&\mbox{${\bf k}$}\\
+ \frac{\partial} {\partial x}&\frac{\partial}{\partial y}&\frac{\partial}{\partial z}\\F_1&F_2&F_3\end{vmatrix} =\bigg(\frac{\partial F_3}{\partial y}-
+ \frac{\partial F_2}{\partial z}\bigg)\,\mbox{${\bf i}$}+\bigg(\frac{\partial F_1}{\partial z}-\frac{\partial F_3}{\partial x}\bigg)\,\mbox{${\bf j}$}+\bigg(\frac{\partial F_2}{\partial x}-\frac{\partial F_1}{\partial y}\bigg)\,\mbox{${\bf k}$}$.
+
+Sundurleitnisetning I: 
+$\displaystyle \mbox{${\rm\bf div\,}$}\mbox{${\bf F}$}(P)=\lim_{\varepsilon\rightarrow 0^+}
+\frac{1}{V_\varepsilon}\int\!\!\!\int_{{\cal S}_\varepsilon}\mbox{${\bf F}$}\cdot\mbox{${\bf N}$}\,dS$.
+
+Setning Stokes: 
+$\displaystyle \mbox{${\bf N}$}\cdot\mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}(P)=\lim_{\varepsilon\rightarrow 0^+}
+\frac{1}{A_\varepsilon}\oint_{C_\varepsilon}\mbox{${\bf F}$}\cdot d\mbox{${\bf r}$}$.
+
+Setning Green: 
+$\displaystyle \oint_{\cal C}F_1(x,y)\,dx+F_2(x,y)\,dy=\int\!\!\!\int_R
+\frac{\partial  F_2}{\partial x}-
+\frac{\partial  F_1}{\partial y}\,dA$.
+
+Sundurleitnisetningin í tveimur víddum: 
+$\displaystyle \int\!\!\!\int_R\mbox{${\rm\bf div\,}$}\mbox{${\bf F}$}\,dA=\oint_{\cal C} \mbox{${\bf F}$}\cdot\mbox{${\bf N}$}\,ds$.
+
+Sundurleitnisetningin, setning Gauss: 
+$\displaystyle \int\!\!\!\int\!\!\!\int_D \mbox{${\rm\bf div\,}$}\mbox{${\bf F}$}\,dV=\int\!\!\!\int_{\cal S} \mbox{${\bf F}$}\cdot\mbox{${\bf N}$}\,dS$. 
+
+$\displaystyle \int\!\!\!\int\!\!\!\int_D\mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}\,dV=-\int\!\!\!\int_{\cal S}\mbox{${\bf F}$}\times\mbox{${\bf N}$}\,dS$.
+
+$\displaystyle \int\!\!\!\int\!\!\!\int_D\mbox{${\rm\bf grad\,}$}\varphi\,dV=\int\!\!\!\int_{\cal S}\varphi\mbox{${\bf N}$}\,dS$.
+
+
+Setning Stokes: 
+$\displaystyle \int\!\!\!\int_{\cal S} \mbox{${\rm\bf curl\,}$}\mbox{${\bf F}$}\cdot\mbox{${\bf N}$}\,dS=\oint_{\cal C}\mbox{${\bf F}$}\cdot \mbox{${\bf T}$}\,ds$.
+
+\newpage
+
+\section*{Reiknireglur}
+\begin{enumerate}[(i)]
+	\item $\nabla(\phi\psi) = \psi\nabla \phi + \phi + \nabla\psi$
+	\item $\nabla \cdot (\phi \mathbf F) = \phi \nabla \cdot \mathbf F 
+		+(\nabla \phi)\cdot \mathbf F$
+	\item $\nabla(f\circ \phi) = (f'\circ \phi)\nabla \phi$
+	\item $\Delta(f\circ \phi) = (f'\circ \phi)\Delta \phi + 
+		(f''\circ \phi)\|\nabla \phi\|^2$
+	\item $\nabla(\chi \circ \mathbf F) = (((\nabla \chi)\circ \mathbf F)
+		\partial_1\mathbf F) \mathbf e_1 + \cdots
+		+ (((\nabla \chi)\circ \mathbf F)\partial _n \mathbf F)
+		\mathbf e_n$
+\end{enumerate}
+
+\bigskip
+
+\begin{enumerate}[(i)]
+	\item ${\bf curl\, grad}\, \phi  = \nabla \times \nabla \phi = 0$
+	\item ${\bf div\, curl}\, \mathbf F  =\nabla \cdot (\nabla \times 
+		\mathbf F) = 0$
+	\item $\nabla \times (\phi \mathbf F) = (\nabla \phi) \times \mathbf F
+		+ \phi(\nabla \times \mathbf F)$
+	\item $\nabla \cdot (\mathbf F \times \mathbf G) =
+		(\nabla \times \mathbf F)\cdot \mathbf G - \mathbf F
+		\cdot(\nabla \times \mathbf G)$
+	\item $\nabla \times( \mathbf F \times \mathbf G) = 
+		(\nabla \cdot \mathbf G) \mathbf F + (\mathbf G\cdot \nabla)
+		\mathbf F - (\nabla \cdot \mathbf F)\mathbf G 
+		-(\mathbf F \cdot \nabla)\mathbf G$
+	\item $\nabla(\mathbf F \cdot \mathbf G) = \mathbf F \times 
+		(\nabla \times \mathbf G) + \mathbf G \times (\nabla \times
+		\mathbf F) + (\mathbf F \cdot \nabla)\mathbf G 
+		+(\mathbf G\cdot \nabla)\mathbf F$
+\item ${\rm \curl \, \curl}\, \mathbf F = 
+		\nabla \times (\nabla \times \mathbf F) = \nabla (\nabla \cdot
+		\mathbf F) - \nabla^2\mathbf F = 
+		{\bf grad\, div\, F} - \nabla^2 \mathbf F$
+\end{enumerate}
+

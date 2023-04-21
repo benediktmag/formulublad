@@ -1,0 +1,172 @@
+\section*{ Stærðfræðigreining I/IA:}
+%\bigskip
+
+\noindent
+\section*{I.1. Tölur og föll}
+% Jafna línu og hallatölu
+
+% Eingarhringurinn
+
+\begin{minipage}{.45\linewidth}
+  $\sin^2(x) + \cos^2(x) =1  $\\
+  $\sin(x\pm y) = \sin(x)\cos(y)\pm \cos(x)\sin(y)$\\
+  $\cos(x\pm y) = \cos(x)\cos(y)\mp \sin(x)\sin(y)$\\
+  $\tan(x\pm y) = \frac{\tan(x)\pm \tan(y)}{1\mp\tan(x)\tan(y)}$
+\end{minipage}%
+\begin{minipage}{.30\linewidth}
+  $\sin(-x) = -\sin(x)$\\
+  $\sin(\pi-x)=\sin(x)$\\
+  $\sin(\pi/2-x)=\cos(x)$\\
+  $\sin^2(x) = \frac {1-\cos(2x)}2$\\
+  $\sin(2x)=2\sin(x)\cos(x)$
+\end{minipage}%
+\begin{minipage}{.25\linewidth}
+  $\cos(-x) = \cos(x)$\\
+  $\cos(\pi-x)=-\cos(x)$\\
+  $\cos(\pi/2-x) = \sin(x)$\\
+  $\cos^2(x) = \frac{1+\cos(2x)}2$\\
+  $\cos(2x)=2\cos^2(x)-1$
+\end{minipage}
+
+%\section{I.2. Markgildi og samfelldni}
+
+\section*{I.3. Afleiður}
+%\[
+%  f'(a) = \lim_{h\to 0}\frac{f(a+h)-f(a)}h
+%\]
+
+
+Taylormargliða: 
+\[
+  P_n(x)=f(a)+f'(a)(x-a)+\frac{f''(a)}{2}(x-a)^2+
+\frac{f'''(a)}{3!}(x-a)^3+\cdots+\frac{f^{(n)}(a)}{n!}(x-a)^n.
+\]
+Skekkjumat: $E_n(x) = \frac{f^{(n+1)}(X)}{(n+1)!}(x-a)^{n+1}$.
+
+\section*{I.4. Torræð föll}
+\subsection*{Andhverfur hornafalla}
+\[
+  \frac d{dx} \arcsin(x) = \frac 1{\sqrt{1-x^2}} \qquad 
+  \frac d{dx} \arccos(x) = \frac {-1}{\sqrt{1-x^2}}\qquad
+  \frac d{dx} \arctan(x) = \frac 1{1+x^2}
+\]
+
+
+\subsection*{Breiðbogaföll}
+\[
+  \sinh(x) = \frac{e^x-e^{-x}}2 \qquad\qquad \cosh(x) = \frac{e^x+e^{-x}}2
+  \qquad\qquad \tanh(x) = \frac {\sinh(x)}{\cosh(x)}
+\]
+\[
+  \text{arsinh(x)} = \ln\left(x + \sqrt{x^2+1}\right) \qquad
+  \text{arcosh(x)} = \ln\left(x + \sqrt{x^2-1}\right) \qquad
+  \text{artanh(x)} = \frac 12\ln\left(\frac{1+x}{1-x}\right)
+\]
+%\section{I.5. Könnun falla}
+
+\section*{I.6. Heildun}
+\[
+  \text{Innsetning:}  \int f(g(x))g'(x)dx = \int f(u)du \qquad
+  \text{Hluth.:}\int u'(x)v(x)dx = u(x)v(x) -  \int u(x)v'(x)dx
+\]
+
+%Heildistöflur
+ 
+\section*{I.7. Rúmmál, massi og massamiðja}
+Kúla: $V=\frac 43 \pi r^3$, $S=4\pi r^2$.\\
+Sívalningur: $V=\pi r^2 h$, $S=2\pi rh$.\\
+Keila með grunnflöt $A$: $V=\frac 13 Ah$.
+
+\subsection*{Snúðar}
+Snúið um $x$-ás: 
+\[
+  V=\pi \int_a^b f(x)^2\, dx, \qquad S= 2\pi \int_a^b |f(x)|\sqrt{1+(f'(x))^2}\, dx.
+\]
+Snúið um $y$-ás: 
+\[
+  V=2\pi \int_a^b xf(x)\, dx, \qquad S= 2\pi \int_a^n |x|\sqrt{1+(f'(x))^2}\, dx.
+\]
+
+
+Lengd grafs: $s=\int_a^b \sqrt{1+(f'(x))^2}\, dx$.
+
+
+% Massar og massamiðjur
+\subsection*{Massamiðja plötu}
+\[
+  \overline{x}=\frac{M_{x=0}}{m}=
+  \frac{\int_a^b x\delta(x)f(x)\,dx}{\int_a^b \delta(x)f(x)\,dx}\qquad \qquad
+  \overline{y}=\frac{M_{y=0}}{m}=
+  \frac{\frac{1}{2}\int_a^b \delta(x)f(x)^2\,dx}{\int_a^b
+  \delta(x)f(x)\,dx}.
+\]
+
+\section*{I.8. Diffurjöfnur}
+\subsection*{Línulegar fyrsta stigs diffurjöfnur, $y'+p(x)y=q(x)$}
+\[
+  y(x)=e^{-\mu(x)}\int e^{\mu(x)}q(x)\,dx, \qquad \qquad \mu(x) = \int p(x)\, dx.
+\]
+
+% Annars stigs diffurjöfnur
+\subsection*{Línuleg annars stigs diffurjafna með fastastuðla, $a y''+by'+cy=0$}
+
+Tilvik I:
+$y(x)=Ae^{r_1x}+Be^{r_2x}$
+ef kennijafnan hefur tvær ólíkar rauntölulausnir $r_1$ og $r_2$.
+
+Tilvik II:
+$y(x)=Ae^{kx}+Bxe^{kx}$ ef kennijafnan 
+hefur eina tvöfalda rauntölulausn $k=-\frac{b}{2a}$.
+
+Tilvik III:
+$y(x)=Ae^{kx}\cos(\omega x)+Be^{kx}\sin(\omega x)$
+ef kennijafnan hefur engar rauntölulausnir,
+bara tvinntölulausnir $r_1=k+i\omega$ og $r_2=k-i\omega$ þar sem 
+$k=-\frac{b}{2a}$ og $\omega=\frac{\sqrt{4ac-b^2}}{2a}$.
+
+
+
+\section*{I.9. Runur og raðir}
+\[
+  \sum_{n=1}^\infty \frac{1}{n(n+1)} =1
+\]
+
+\section*{I.10. Veldaraðir}
+\[
+  \text{Kvótapróf:}\quad \frac 1R = L=\lim_{n\to \infty} \left|\frac{a_{n+1}}{a_n}\right| \qquad\qquad
+  \text{Rótarpróf:}\quad \frac 1R = L=\lim_{n\to \infty} \sqrt[n]{|a_n|}
+\]
+{\small
+\begin{align*}
+   e^x&=\sum_{n=0}^\infty\frac{x^n}{n!}
+       =1+x+\frac{x^2}{2}+\frac{x^3}{3!}
+       +\cdots
+     &\mbox{fyrir öll }x\\
+   \sin x&=  \sum_{n=0}^\infty\frac{(-1)^n}{(2n+1)!}x^{2n+1}
+       =x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\cdots
+       &\mbox{fyrir öll }x\\ 
+   \cos x&=  \sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}
+       =1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\cdots
+       &\mbox{fyrir öll }x\\
+   \frac{1}{1-x}&=\sum_{n=0}^\infty x^n
+       =1+x+x^2+x^3+\cdots
+   &\mbox{fyrir }-1<x<1\\
+   \frac{1}{(1-x)^2}&=\sum_{n=1}^\infty nx^{n-1}
+       =1+2x+3x^2+4x^3+\cdots
+   &\mbox{fyrir }-1<x<1\\
+   \ln(1+x)&=  \sum_{n=1}^\infty\frac{(-1)^{n-1}}{n}x^n
+       =x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\cdots
+       &\mbox{fyrir }-1<x\leq 1\\
+   \tan^{-1} x&=  \sum_{n=0}^\infty\frac{(-1)^n}{2n+1}x^{2n+1}
+       =x-\frac{x^3}{3}+\frac{x^5}{5}-\frac{x^7}{7}+\cdots
+       &\mbox{fyrir }-1\leq x\leq 1\\\\
+   \sinh x&=  \sum_{n=0}^\infty\frac{x^{2n+1}}{(2n+1)!}
+       =x+\frac{x^3}{3!}+\frac{x^5}{5!}+\frac{x^7}{7!}+\cdots
+       &\mbox{fyrir öll } x\\
+   \cosh x&=  \sum_{n=0}^\infty\frac{x^{2n}}{(2n)!}
+       =1+\frac{x^2}{2!}+\frac{x^4}{4!}+\frac{x^6}{6!}+\cdots
+       &\mbox{fyrir öll } x
+      \end{align*}
+    }
+
+
