@@ -1,4 +1,4 @@
-\documentclass[11pt,icelandic]{article}
+\documentclass[11pt,icelandic,A4]{article}
 
 \include{preamble}
 
@@ -14,83 +14,11 @@
 %\bigskip
 \hrule
 
-\section*{1. Linear Ordinary Differential Equations}
+\input{I}
 
-\subsection*{Fird Order Linear Equations}
-$y'+p(x)y=g(x)$:
-\begin{align*}
- y(x) &= e^{-M(x)}\left(C+\int g(x) e^{M(x)}\, dx\right)
- & \text{where } M(x) = \int p(x) dx.
-\end{align*}
-
-\subsection*{Reduction of order}
-$y'' + p(x)y' + q(x)y=0$:
-\begin{align*}
- u_2(x)&= u_1(x) \int \frac{e^{-P(t)}}{u_1^2(t)}\, dt, 
-&\text{where } P(x) =  \int p(x)\, dx.
-\end{align*}
-
-\section*{2. Separation of Variables}
-
-\section*{3. Series Solutions of Linear Equations}
-
-\subsection*{Recursive formula for the coefficients at an ordinary point}
-\begin{align*}
-    (k+2)(k+1)c_{k+2} + \sum_{j=0}^{k} (k-j+1)a_jc_{k-j+1} + \sum_{j=0}^{k}b_jc_{k-j} &= 0. 
-\end{align*}
-
-\subsection*{Recursive formula for the coefficients at a regular singular point}
-\begin{align*}
-P(k+\gamma)c_k + \sum_{j=0}^{k-1} ((j+\gamma)a_{k-j} + b_{k-j}) c_j &=0, &k\in \mathbb N,
-\end{align*}
-with the understanding that for $k=0$ the above sum is empty, and the indicial 
-polynomial $P$ is given by 
-\begin{align*}
- P(X) &= X(X-1) + a_0X + b_0.
-\end{align*}
-
-\section*{4. Existence Theory}
-
-\subsection*{Picard iteration}
-\begin{align*}
-  \phi_{m+1}(x) = y_0 + \int_{x_0}^x f(t,\phi_m(t))\, dt.
-\end{align*}
-
-\section*{5. The Exponential of a Matrix}
-
-\section*{7. Sturm-Liouville Theory}
-
-\subsection*{Sturm-Liouville form}
-\begin{align*}
- Ly = \frac{d}{dx} \left(p(x)\frac{dy}{dx}\right) + q(x)y = g(x)
-\end{align*}
-
-\subsection*{Inner product and norm}
-\begin{align*}
- \langle u,v\rangle &= \int_a^b u(x)\overline {v(x)}\, dx 
- &  \|u\|_2 = \sqrt{\langle u,u\rangle }
-\end{align*}
-
-\section*{-. Fourier series}
-
- \subsection*{Fourier series $f$ on $[-L,L]$: Exponential form:}
- 
- \begin{align*}
-  f(x) &\sim \frac{c_0}2 + \sum_{n=-\infty}^\infty c_n e^{\frac{inx\pi}{L},}\\
-  c_n &= \hat f(n) = \frac 1{2L} \int_{-L}^L f(x) e^{-\frac{n\pi x}L}\, dx, & n\in \mathbb Z.
- \end{align*}
+\newpage 
 
 
- \subsection*{Fourier series $f$ on $[-L,L]$: Trigonometric form}
+\input{IIIA}
 
- \begin{align*}
-  f(x) &\sim \frac{a_0}2 + \sum_{n=1}^\infty a_n \cos\left(\frac {n\pi x}L \right) + \sum_{n=1}^{\infty}b_n \sin\left(\frac{n\pi x}L \right)\\
-  a_n &= \frac 1L \int_{-L}^{L} f(x) \cos\left(\frac{n\pi x}L\right)\, dx, & n\geq 0\\
-  b_n &= \frac 1L \int_{-L}^L f(x) \sin\left(\frac{n\pi x}L \right)\, dx, & n\geq 1
- \end{align*}
-
- \subsection*{Solving Ordinary Differential Equations}
-  If $P(D)u=f$, then $P(in)\hat u(n) = \hat f(n)$ and
-\[ u(x) = \sum_{n=-\infty}^{\infty} \frac{\hat f(n)}{P(in)}e^{inx}.\]
- 
 \end{document}

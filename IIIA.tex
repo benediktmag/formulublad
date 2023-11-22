@@ -1,0 +1,139 @@
+\section*{Mathematical Analysis IIIA:}
+
+
+\section*{1. Linear Ordinary Differential Equations}
+
+\subsection*{First Order Linear Equations}
+$y'+p(x)y=g(x)$:
+\begin{align*}
+ y(x) &= e^{-M(x)}\left(C+\int g(x) e^{M(x)}\, dx\right),
+ & \text{where } M(x) = \int p(x) dx.
+\end{align*}
+
+\subsection*{Reduction of order}
+$y'' + p(x)y' + q(x)y=0$:
+\begin{align*}
+ u_2(x)&= u_1(x) \int \frac{e^{-P(t)}}{u_1^2(t)}\, dt, 
+&\text{where } P(x) =  \int p(x)\, dx.
+\end{align*}
+
+\subsection*{Shift rule}
+\[
+    P(D) (e^{\lambda x}f(x)) = e^{\lambda x}P(D+\lambda)f(x)
+\]
+
+\subsection*{Green function}
+Solution to $y^{(n)} + p_{n-1}(x)y^{(n-1)}+\cdots+p_1(x)y'+p_0y=g(x)$,
+$U_1(y)=U_2(y)=\cdots=U_n(y)=0$,
+\[
+  y(x) = \int_a^b G(x,\xi) g(\xi)\, d\xi.
+  \]
+
+\section*{2. Separation of Variables}
+
+\subsection*{Newton's equation}
+Equation: $x''=F(x)$ or  $(\{x'=y,y'=F(x)\})$.\\
+Potential: $U(x) := -\int F(x)\, dx$.\\
+Energy: $E(x,y) := U(x) + \frac {y^2}2$.\\
+Period of small oscillations: $\lim_{\epsilon \to 0} L_\epsilon = 
+\frac{2\pi}{\sqrt{U''(x_0)}}$.
+
+\section*{3. Series Solutions of Linear Equations}
+
+\subsection*{Recursive formula for the coefficients at an ordinary point}
+\begin{align*}
+    (k+2)(k+1)c_{k+2} + \sum_{j=0}^{k} (k-j+1)a_jc_{k-j+1} + \sum_{j=0}^{k}b_jc_{k-j} &= 0. 
+\end{align*}
+
+\subsection*{Recursive formula for the coefficients at a regular singular point}
+\begin{align*}
+P(k+\gamma)c_k + \sum_{j=0}^{k-1} ((j+\gamma)a_{k-j} + b_{k-j}) c_j &=0, &k\in \mathbb N,
+\end{align*}
+with the understanding that for $k=0$ the sum is empty, and the indicial 
+polynomial $P$ is given by 
+\begin{align*}
+ P(X) &= X(X-1) + a_0X + b_0.
+\end{align*}
+
+\section*{4. Existence Theory}
+
+\subsection*{Picard iteration}
+\begin{align*}
+  \phi_{m+1}(x) = y_0 + \int_{x_0}^x f(t,\phi_m(t))\, dt.
+\end{align*}
+
+\section*{5. The Exponential of a Matrix}
+
+\subsection*{Newton divided differences}
+\[
+    F[\lambda_l] = F(\lambda_l), \qquad
+    F[\lambda_l,\ldots,\lambda_{l+k}] = 
+    \frac{F[\lambda_l+1,\ldots,\lambda_{l+k}]-F[\lambda_l,\ldots,
+    \lambda_{l+k-1}]}{\lambda_{l+k}-\lambda_l}.
+\]
+If $\lambda_l=\cdots = \lambda_{k+l}$, then 
+$F[\gamma_l,\ldots,\gamma_{l+k}] = F^{(k)}(\gamma_l)/k!$.
+
+\section*{7. Sturm-Liouville Theory}
+
+\subsection*{Sturm-Liouville form}
+\begin{align*}
+ Ly = \frac{d}{dx} \left(p(x)\frac{dy}{dx}\right) + q(x)y = g(x).
+\end{align*}
+
+\subsection*{Inner product, norm and Bessel inequality}
+\begin{align*}
+ \langle u,v\rangle &= \int_a^b u(x)\overline {v(x)}\, dx, 
+ \qquad \qquad  \|u\|_2 = \sqrt{\langle u,u\rangle },
+ \qquad \qquad \sum_{n=1}^{\infty} |\langle f, \phi_n\rangle|^2 \leq 
+ \|f\|_2^2.
+\end{align*}
+
+\subsection*{Solutions to non-homogeneous equations}
+\begin{center}$Ly-\mu y = h(x)$, $U_1(y)=0$, $U_2(y)=0$. \end{center}
+If $\mu$ not an eigenvalue: $y(x) = \sum_{n=1}^\infty (\lambda \mu)^{-1}\langle h,\phi_n 
+\rangle \phi_n(x)$.\\
+If $\mu$ is an eigenvalue: $y(x) = \sum_{\lambda_n\neq \mu}^\infty (\lambda \mu)^{-1}\langle h,\phi_n 
+\rangle \phi_n(x)$.
+
+\section*{Fourier Analysis}
+
+ \subsection*{Fourier series $f$ on $[-L,L]$: Exponential form:}
+ 
+ \begin{align*}
+  f(x) &\sim \frac{c_0}2 + \sum_{n=-\infty}^\infty c_n e^{\frac{inx\pi}{L},}\\
+  c_n &= \hat f(n) = \frac 1{2L} \int_{-L}^L f(x) e^{-\frac{in\pi x}L}\, dx, \qquad n\in \mathbb Z.
+ \end{align*}
+
+
+ \subsection*{Fourier series $f$ on $[-L,L]$: Trigonometric form}
+
+   \[
+  f(x) \sim \frac{a_0}2 + \sum_{n=1}^\infty a_n \cos\left(\frac {n\pi x}L \right) + 
+  \sum_{n=1}^{\infty}b_n \sin\left(\frac{n\pi x}L \right).
+ \]
+  \begin{align*}
+   a_n &= \frac 1L \int_{-L}^{L} f(x) \cos\left(\frac{n\pi x}L\right)\, dx, \quad n\geq 0.
+  &b_n = \frac 1L \int_{-L}^L f(x) \sin\left(\frac{n\pi x}L \right)\, dx, \quad n\geq 1.
+ \end{align*}
+
+ \subsection*{Connections between coefficients:}
+ \begin{minipage}{.45\linewidth}
+    \begin{align*}
+    c_0 &= a_0,\\
+    c_n &= (a_n-ib_n)/2, &\text{for } n>0,\\
+    c_n &= (a_{-n} + ib_{-n})/2, &\text{for } n<0.
+    \end{align*}
+  \end{minipage}%
+  \begin{minipage}{.45\linewidth}
+    \begin{align*}
+    a_0 &= c_0,\\
+    a_n &= c_n + c_{-n}, &\text{for } n>0,\\
+    b_n &= i(c_n - c_{-n}), &\text{for } n>0.
+    \end{align*}
+  \end{minipage}%
+
+ \subsection*{Solving Ordinary Differential Equations}
+  If $P(D)u=f$, then $P(in)\hat u(n) = \hat f(n)$ and
+\[ u(x) = \sum_{n=-\infty}^{\infty} \frac{\hat f(n)}{P(in)}e^{inx}.\]
+ 
