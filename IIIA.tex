@@ -21,7 +21,7 @@ $y'' + p(x)y' + q(x)y=0$:
 \[
     P(D) (e^{\lambda x}f(x)) = e^{\lambda x}P(D+\lambda)f(x)
 \]
-
+ 
 \subsection*{Green function}
 Solution to $y^{(n)} + p_{n-1}(x)y^{(n-1)}+\cdots+p_1(x)y'+p_0y=g(x)$,
 $U_1(y)=U_2(y)=\cdots=U_n(y)=0$,
@@ -64,6 +64,9 @@ polynomial $P$ is given by
 
 \section*{5. The Exponential of a Matrix}
 
+Solution to $y'=A(x)y+h(x)$, $y(x_0)=\eta$ is 
+$y(x) = e^{(x-x_0)A}\eta + \int_{x_0}^x e^{(x-t)A}h(t)\, dt$.
+
 \subsection*{Newton divided differences}
 \[
     F[\lambda_l] = F(\lambda_l), \qquad
@@ -73,6 +76,7 @@ polynomial $P$ is given by
 \]
 If $\lambda_l=\cdots = \lambda_{k+l}$, then 
 $F[\gamma_l,\ldots,\gamma_{l+k}] = F^{(k)}(\gamma_l)/k!$.
+
 
 \section*{7. Sturm-Liouville Theory}
 
@@ -91,9 +95,9 @@ $F[\gamma_l,\ldots,\gamma_{l+k}] = F^{(k)}(\gamma_l)/k!$.
 
 \subsection*{Solutions to non-homogeneous equations}
 \begin{center}$Ly-\mu y = h(x)$, $U_1(y)=0$, $U_2(y)=0$. \end{center}
-If $\mu$ not an eigenvalue: $y(x) = \sum_{n=1}^\infty (\lambda \mu)^{-1}\langle h,\phi_n 
+If $\mu$ not an eigenvalue: $y(x) = \sum_{n=1}^\infty (\lambda_n- \mu)^{-1}\langle h,\phi_n 
 \rangle \phi_n(x)$.\\
-If $\mu$ is an eigenvalue: $y(x) = \sum_{\lambda_n\neq \mu}^\infty (\lambda \mu)^{-1}\langle h,\phi_n 
+If $\mu$ is an eigenvalue: $y(x) = \sum_{\lambda_n\neq \mu}^\infty (\lambda_n - \mu)^{-1}\langle h,\phi_n 
 \rangle \phi_n(x)$.
 
 \section*{Fourier Analysis}
