@@ -29,19 +29,10 @@ jobs:
             formulubladII.tex
             formulubladIIIA.tex
             formulubladTvinn.tex
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v4
-        with:
-          name: PDF
-          path: |
-            formulubladI.pdf
-            formulubladII.pdf
-            formulubladIIIA.pdf
-            formulubladTvinn.pdf
       - name: Commit PDFs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add formulubladI.pdf formulubladII.pdf formulubladIIIA.pdf formulubladTvinn.pdf
-          git commit -m "Update PDFs" || echo "No changes to commit"
+          git commit -m "Uppfærðar pdf-skrár" || echo "No changes to commit"
           git push
