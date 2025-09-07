@@ -9,18 +9,17 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v4
         with:
-          root_file: formulubladI.tex
+          root_file: |
+            formulubladI.tex
+            formulubladII.tex
+            formulubladIIIA.tex
+            formulubladTvinn.tex
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
           name: PDF
-          path: formulubladI.pdf
-      - name: Compile LaTeX document
-        uses: xu-cheng/latex-action@v4
-        with:
-          root_file: formulubladTvinn.tex
-      - name: Upload PDF file
-        uses: actions/upload-artifact@v4
-        with:
-          name: PDF
-          path: formulubladTvinn.pdf
+          path: |
+            formulubladI.pdf
+            formulubladII.pdf
+            formulubladIIIA.pdf
+            formulubladTvinn.pdf
