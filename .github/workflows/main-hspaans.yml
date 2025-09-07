@@ -1,6 +1,5 @@
 name: Build LaTeX document
 on: [push]
-
 jobs:
   build_latex:
     runs-on: ubuntu-latest
@@ -8,14 +7,6 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v2
       - name: Compile LaTeX document
-        # The root LaTeX file to be compiled
-        root_file: formulubladI.tex
-        # The working directory for the latex compiler to be invoked
-        working_directory: # optional
-        # LaTeX engine to be used
-        compiler: # optional, default is latexmk
-        # Extra arguments to be passed to the latex compiler
-        args: # optional, default is -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode
-        # Install extra packages by apt-get
-        extra_system_packages: # optional
-          
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: formulubladI.tex
