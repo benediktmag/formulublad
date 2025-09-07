@@ -7,6 +7,11 @@ on:
       - 'formulubladII.pdf'
       - 'formulubladIIIA.pdf'
       - 'formulubladTvinn.pdf'
+  workflow_dispatch:
+
+permissions:
+  contents: write   # 👈 allow pushing commits
+
 
 jobs:
   build_latex:
