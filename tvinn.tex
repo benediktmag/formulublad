@@ -71,3 +71,22 @@ f ^ {(n)} (z) = \frac{n!}{2\pi i} \int_{\partial \Omega} \frac{f(\zeta)}{(\zeta 
 \[
 		\int_{\partial \Omega} f(z)\,dz = 2 \pi i \sum_{\alpha \in \omega \cap A} \text{Res} (f, \alpha)
 \]
+
+\bigskip
+
+\[
+I(\xi, z)f(z) = \frac{1}{2\pi i} \int_{\xi} \frac{f(\zeta)}{\zeta - z} \partial \zeta
+\]
+\bigskip
+
+\[
+I(\xi, z)f ^ {(n)} (z) = \frac{n!}{2\pi i} \int_{\xi} \frac{f(\zeta)}{(\zeta - z) ^ {n+1}} \partial \zeta
+\]
+\bigskip
+
+\[
+\int_{\xi} f(\zeta)\,d\zeta = 2 \pi i \sum_{\alpha \in I(\xi)\cap A} \text{Res} (f, \alpha)I(\xi, \alpha)
+\]
+\[
+\sum_{\alpha \in I(\xi)}\omega(f,\alpha)I(\xi,\alpha)=\frac{1}{2\pi i}\int_{\xi}\frac{f'(z)}{f(z)}dz=\frac{1}{2\pi i}\int_{f_*\xi}\frac{dw}{w}=I(f_*\xi, 0)
+\]
