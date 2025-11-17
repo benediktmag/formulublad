@@ -77,9 +77,27 @@ f ^ {(n)} (z) = \frac{n!}{2\pi i} \int_{\partial \Omega} \frac{f(\zeta)}{(\zeta 
 \]
 
 \bigskip
+
 \noindent Leif í m-ta stigs skauti:
 \[\textrm{Res}(f,\alpha)=\frac{g^{(m-1)}(\alpha)}{(m-1)!}\]
 
 \bigskip
 \noindent Stofnbrotaliðun:
 \[\frac{P(z)}{Q(z)}=\sum_{j=1}^k\frac{A_{j,0}}{(z-\alpha_j)^{m_j}}+\cdots+\frac{A_{j,m_j-1}}{(z-\alpha_j)},\quad A_{j,\ell}=\frac{f_j^{(\ell)}(\alpha_j)}{\ell!},\quad f_j(z)=\frac{(z-\alpha_j)^{m_j}P(z)}{Q(z)}\]
+
+\[
+I(\xi, z)f(z) = \frac{1}{2\pi i} \int_{\xi} \frac{f(\zeta)}{\zeta - z} \partial \zeta
+\]
+\bigskip
+
+\[
+I(\xi, z)f ^ {(n)} (z) = \frac{n!}{2\pi i} \int_{\xi} \frac{f(\zeta)}{(\zeta - z) ^ {n+1}} \partial \zeta
+\]
+\bigskip
+
+\[
+\int_{\xi} f(\zeta)\,d\zeta = 2 \pi i \sum_{\alpha \in I(\xi)\cap A} \text{Res} (f, \alpha)I(\xi, \alpha)
+\]
+\[
+\sum_{\alpha \in I(\xi)}\omega(f,\alpha)I(\xi,\alpha)=\frac{1}{2\pi i}\int_{\xi}\frac{f'(z)}{f(z)}dz=\frac{1}{2\pi i}\int_{f_*\xi}\frac{dw}{w}=I(f_*\xi, 0)
+\]
