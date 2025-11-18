@@ -73,6 +73,22 @@ $\displaystyle \text{Log} z
 f ^ {(n)} (z) = \frac{n!}{2\pi i} \int_{\partial \Omega} \frac{f(\zeta)}{(\zeta - z) ^ {n+1}} \partial \zeta
 \]
 \bigskip
+\[
+f(z) = \frac{1}{2\pi i} \int_{\partial\Omega} \frac{f(\zeta)}{\zeta - z}\, d\zeta
+- \frac{1}{\pi} \iint_{\Omega} \frac{\partial_{\bar{\zeta}} f(\zeta)}{\zeta - z}\, d\xi\, d\eta .
+\]
+\bigskip
+\[
+\int_{\partial \Omega} \frac{f(z)}{Q(z)}dz
+    = 2\pi i \sum_{\alpha_j \in \Omega} \frac{f(\alpha_j)}{Q'(\alpha_j)}.
+\]
+\bigskip
+\[
+\int_{-\infty}^{+\infty} \frac{f(x)}{Q(x)}\, dx
+    = 2\pi i \sum_{\alpha_j \in H_+} \frac{f(\alpha_j)}{Q'(\alpha_j)}
+\]
+
+\bigskip
 \section*{4. Leifareikningur}
 \[
 		\int_{\partial \Omega} f(z)\,dz = 2 \pi i \sum_{\alpha \in \omega \cap A} \text{Res} (f, \alpha)
