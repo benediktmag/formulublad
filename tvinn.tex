@@ -1,5 +1,5 @@
 \noindent
-\section*{Hornaföll}
+\section*{1. Tvinntölur og tvinngild föll}
 
 % Eingarhringurinn
 \begin{minipage}{.5\linewidth}
@@ -16,35 +16,37 @@
 	$(\cos(\theta)+\sin(\theta))^n = \cos(n\theta)+i\sin(n\theta)$
 \end{minipage}
 
-\begin{minipage}{.5\linewidth}
-	$\overline {\dz f} = \doz{ \overline{f}}$
-\end{minipage}%
-\begin{minipage}{.5\linewidth}
-	$\overline {\doz {f}} = \dz{\overline{f}}$
-\end{minipage}
+\section*{2. Fáguð föll}
 
-\begin{minipage}{1\linewidth}
-Höfuðgrein hornsins:
-\begin{equation*}
-  \text{Arg} \; z = 2 \arctan \bigg(\frac{y}{|z| + x} \biggl), \qquad
-		  \text{Arg}: \C \setminus R_- \to ]-\pi,\pi[.
-\end{equation*}
-\end{minipage}
-%
-\begin{minipage}{1\linewidth}
-\noindent Höfuðgrein lografallsins:
-\begin{equation*}
-      \text{Log} z = \ln |z| + i \text{Arg}(z), \qquad \text{Log}: \mathbb{C} \setminus \mathbb{R_{-}} \to \mathbb{C}.
-\end{equation*}
-\end{minipage}
-
-\begin{equation*}
+\begin{minipage}{.5\linewidth}
+	$$\overline {\dz f} = \doz{ \overline{f}}$$
+  \begin{equation*}
 		\cos(z) = \frac{e^{iz}+e^{-iz}}2
 \end{equation*}
 
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+	$$\overline {\doz {f}} = \dz{\overline{f}}$$
 \begin{equation*}
 		\sin(z) = \frac{e^{iz}-e^{-iz}}{2i}
 \end{equation*}
+
+\end{minipage}
+
+Höfuðgrein hornsins:
+$\displaystyle  \text{Arg} \; z = 2 \arctan \bigg(\frac{y}{|z| + x} \biggl)$, 
+$\text{Arg}: \C \setminus \R_- \to ]-\pi,\pi[$.
+
+\medskip
+
+\noindent Höfuðgrein lografallsins:
+$\displaystyle \text{Log} z 
+= \ln |z| + i \text{Arg}(z)$, $\text{Log}: \mathbb{C} \setminus 
+\mathbb{R_{-}} \to \mathbb{C}$.
+
+
+
+\section*{3. Cauchy-setning og Cauchy-formúla}
 
 \begin{minipage}{1\linewidth}
 \begin{align*} \text{Vegheildi: }
@@ -71,7 +73,7 @@ Höfuðgrein hornsins:
 f ^ {(n)} (z) = \frac{n!}{2\pi i} \int_{\partial \Omega} \frac{f(\zeta)}{(\zeta - z) ^ {n+1}} \partial \zeta
 \]
 \bigskip
-
+\section*{4. Leifareikningur}
 \[
 		\int_{\partial \Omega} f(z)\,dz = 2 \pi i \sum_{\alpha \in \omega \cap A} \text{Res} (f, \alpha)
 \]
@@ -85,19 +87,23 @@ f ^ {(n)} (z) = \frac{n!}{2\pi i} \int_{\partial \Omega} \frac{f(\zeta)}{(\zeta 
 \noindent Stofnbrotaliðun:
 \[\frac{P(z)}{Q(z)}=\sum_{j=1}^k\frac{A_{j,0}}{(z-\alpha_j)^{m_j}}+\cdots+\frac{A_{j,m_j-1}}{(z-\alpha_j)},\quad A_{j,\ell}=\frac{f_j^{(\ell)}(\alpha_j)}{\ell!},\quad f_j(z)=\frac{(z-\alpha_j)^{m_j}P(z)}{Q(z)}\]
 
+\section*{5. Almenn Cauchy-setning}
+\begin{minipage}{0.5\linewidth}
 \[
 I(\xi, z)f(z) = \frac{1}{2\pi i} \int_{\xi} \frac{f(\zeta)}{\zeta - z} \partial \zeta
 \]
-\bigskip
-
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
 \[
 I(\xi, z)f ^ {(n)} (z) = \frac{n!}{2\pi i} \int_{\xi} \frac{f(\zeta)}{(\zeta - z) ^ {n+1}} \partial \zeta
 \]
-\bigskip
+\end{minipage}
 
+\bigskip
 \[
 \int_{\xi} f(\zeta)\,d\zeta = 2 \pi i \sum_{\alpha \in I(\xi)\cap A} \text{Res} (f, \alpha)I(\xi, \alpha)
 \]
+\bigskip
 \[
 \sum_{\alpha \in I(\xi)}\omega(f,\alpha)I(\xi,\alpha)=\frac{1}{2\pi i}\int_{\xi}\frac{f'(z)}{f(z)}dz=\frac{1}{2\pi i}\int_{f_*\xi}\frac{dw}{w}=I(f_*\xi, 0)
 \]
